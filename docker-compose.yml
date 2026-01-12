@@ -1,0 +1,9 @@
+
+services:
+  devops-agent:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONPATH=/app
+    command: python -m devops_platform_agent.main
